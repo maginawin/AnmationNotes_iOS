@@ -14,6 +14,9 @@
 		0811A0C61A8054EF007A272B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0811A0C51A8054EF007A272B /* Images.xcassets */; };
 		0811A0C91A8054F0007A272B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0811A0C71A8054F0007A272B /* LaunchScreen.xib */; };
 		0811A0D51A8054F0007A272B /* AnimationNotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0811A0D41A8054F0007A272B /* AnimationNotesTests.m */; };
+		0811A0E11A805554007A272B /* CALayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0811A0E01A805554007A272B /* CALayerViewController.m */; };
+		0811A0E51A805F1C007A272B /* CATransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0811A0E41A805F1C007A272B /* CATransitionViewController.m */; };
+		0811A0E91A806EF5007A272B /* CAPropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0811A0E81A806EF5007A272B /* CAPropertyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		0811A0CE1A8054F0007A272B /* AnimationNotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimationNotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0811A0D31A8054F0007A272B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0811A0D41A8054F0007A272B /* AnimationNotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationNotesTests.m; sourceTree = "<group>"; };
+		0811A0DF1A805554007A272B /* CALayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayerViewController.h; sourceTree = "<group>"; };
+		0811A0E01A805554007A272B /* CALayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALayerViewController.m; sourceTree = "<group>"; };
+		0811A0E31A805F1C007A272B /* CATransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransitionViewController.h; sourceTree = "<group>"; };
+		0811A0E41A805F1C007A272B /* CATransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransitionViewController.m; sourceTree = "<group>"; };
+		0811A0E71A806EF5007A272B /* CAPropertyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAPropertyViewController.h; sourceTree = "<group>"; };
+		0811A0E81A806EF5007A272B /* CAPropertyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAPropertyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +90,9 @@
 		0811A0B71A8054EF007A272B /* AnimationNotes */ = {
 			isa = PBXGroup;
 			children = (
+				0811A0E61A806EE1007A272B /* CAPropertyAnimation */,
+				0811A0E21A805F10007A272B /* CATransition */,
+				0811A0DE1A805539007A272B /* CALayer */,
 				0811A0BC1A8054EF007A272B /* AppDelegate.h */,
 				0811A0BD1A8054EF007A272B /* AppDelegate.m */,
 				0811A0BF1A8054EF007A272B /* ViewController.h */,
@@ -117,6 +129,33 @@
 				0811A0D31A8054F0007A272B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0811A0DE1A805539007A272B /* CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				0811A0DF1A805554007A272B /* CALayerViewController.h */,
+				0811A0E01A805554007A272B /* CALayerViewController.m */,
+			);
+			name = CALayer;
+			sourceTree = "<group>";
+		};
+		0811A0E21A805F10007A272B /* CATransition */ = {
+			isa = PBXGroup;
+			children = (
+				0811A0E31A805F1C007A272B /* CATransitionViewController.h */,
+				0811A0E41A805F1C007A272B /* CATransitionViewController.m */,
+			);
+			name = CATransition;
+			sourceTree = "<group>";
+		};
+		0811A0E61A806EE1007A272B /* CAPropertyAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				0811A0E71A806EF5007A272B /* CAPropertyViewController.h */,
+				0811A0E81A806EF5007A272B /* CAPropertyViewController.m */,
+			);
+			name = CAPropertyAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +260,10 @@
 			files = (
 				0811A0C11A8054EF007A272B /* ViewController.m in Sources */,
 				0811A0BE1A8054EF007A272B /* AppDelegate.m in Sources */,
+				0811A0E11A805554007A272B /* CALayerViewController.m in Sources */,
+				0811A0E91A806EF5007A272B /* CAPropertyViewController.m in Sources */,
 				0811A0BB1A8054EF007A272B /* main.m in Sources */,
+				0811A0E51A805F1C007A272B /* CATransitionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AnimationNotes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AnimationNotes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
